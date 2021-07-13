@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 MALE = 0
 FEMALE = 1
 CLUSTERS = 2
+FEATURES = 2
 
 
 def change_string(gender):
@@ -57,7 +58,7 @@ df['Gender'] = df['Gender'].apply(change_string)
 clust = []
 
 for i in range(CLUSTERS):
-    temp = np.random.rand(2,1)*10
+    temp = np.random.rand(FEATURES,1)*10
     temp = tuple(map(tuple, temp))
     clust.append(temp)
 
